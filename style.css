@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 body{
     font-family: 'Poppins', sans-serif;
+    margin: 0;
     
    
 }
@@ -13,7 +14,7 @@ body{
 .container{
     background-color: #2d25a0;
     height: 450px;
-    width: 1327px;
+    width: 100%;text-align: center;
     
 }
 
@@ -22,10 +23,9 @@ body{
     grid-template-columns: repeat(2,1fr);
 }
 .banner{
-    width: 485px;
-    height: px;
-    margin-left: 150px;
+    width: 100%;
     margin-top: 100px;
+    margin-bottom: 100px;
    
 }
 h1{
@@ -33,7 +33,7 @@ h1{
     font-weight: 700;
     color: white;
     transition: 1s;
-    line-height: 60px;
+
 }
 h1:hover{
     transform:scale(1.1);
@@ -54,51 +54,40 @@ button{
 
 /* main-section top-players style */
 
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
+.player-part{
+    width: 1050px;
+    margin-top: 100px;
+    margin-right: 210px;
 }
+.player-frame{
+    border: 2px solid white;
+    background-color: white;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 1px 1px 40px white;
 
-.top-player{
-    width:1050px;
-    margin-top: 150px;
 }
-
 .players{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-row-gap:30px;
-
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 27px 30px;
+    margin: 0 180px;
+    align-items: center;
 }
-.player{
-    width:250px;
-    padding: 20px;
-    margin-left: 20px;
-    margin-top:20px ;
-    border-radius: 10px;
-    box-shadow: 10px 10px 20px gray;
-    transition: 2s;
-    
-}
-.player:hover{
-    width:250px;
-    padding: 20px;
-    margin-left: 20px;
-    margin-top:20px ;
-    border-radius: 10px;
-    box-shadow: 10px 10px 30px orange;
-    transform: scale(1.2);
-    background-color: orange;
-    color: white;
-    
-}
-
 .player img{
-    width:200px;
-    height:177px;
+    border-radius: 10px;
+    width: 100%;
+    height: 256px;
     
+}
+.player-details{
+    border-radius: 10px;
+    width: 300px;
+    height: 154px;
+    padding: 5px;
+}
+.player-detail h2{
+    font-size: 28px;
 }
 
 /* contact section style */
@@ -145,8 +134,11 @@ main{
     }
 }
 /* footer */
+footer{
+    margin-top: 100px;
+}
 .footer-bottom{
-    border: 1px solid black;
+    border: 1px solid white;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -156,22 +148,43 @@ main{
 }
 .info{
     display: flex;
+    padding-right: 10px;
+}
+.margin{
+    margin-right: 20px;
 }
 
 /* @media quaries  mobaile devices*/
 
-@media only screen and (max-width:668px) {   
-   .container{
-       width: 100%;
-     }
-     .banners{
-         grid-template-columns:repeat(1,1fr);
-     }
-     .players{
-         grid-template-columns: repeat(1,1fr);
-     }
-     .player{
-         
-     }
-
+@media only screen and (max-width:668px) {
+    main{
+        margin: 0;
+        margin-bottom: 100px;
     }
+header{
+        margin-bottom: 400px;
+    }
+.top-banner{
+    width: 100%;
+
+}
+.container .banners{
+    background-color: #2d25a0;
+    display: flex;
+   flex-direction: column;
+} 
+.player-part{
+    width: 100%;
+}
+ .players{
+     grid-template-columns: repeat(1, 1fr);
+     margin: 0;
+     padding: 0;
+     justify-content: center;
+ }
+ footer{
+     width: 100%;
+     margin: 0;
+ }
+
+}
